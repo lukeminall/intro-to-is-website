@@ -1,1 +1,1 @@
-# intro-to-is-website
+# Website Project for Introduction to Information Systems (Uni project)
