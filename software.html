@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>An Introduction to Cloud Computing</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+    <nav class="menu">
+      <button aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        Menu
+      </button>
+      <ul id="menu-list">
+        <li>
+          <a href="index.html">Introduction</a>
+        </li>
+        <li>
+          <a href="infrastructure-platform.html">IaaS &amp; PaaS</a>
+        </li>
+        <li>
+          <a class="active" href="software.html">SaaS</a>
+        </li>
+        <li>
+          <a href="infomation-processes.html">INaaS & BPaaS</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="inner-page-header">
+    <div class="wrapper">
+      <h1>SaaS</h1>
+    </div>
+  </section>
+  <div class="wrapper">
+    <article class="post">
+      <h2>Software as a Service (SaaS)</h2>
+      <p>One of the characterisitcs of cloud computing is <em>On Demand Self Service</em> which means that a service is available any time anywhere. This makes the cloud an appealing place for buisinesses to host their software, as employees can access it from any device, including in some cases their own mobile phones and tablets; it also reduces the need for individual software licences and in the case of web based software, reduces cross device compatability issues. The following 8 software types are increasingly being migrated to the cloud:</p>
+      <ol>
+        <li>Enterprise Recourse Planning</li>
+        <li>Customer Relationship Managment</li>
+        <li>Office Productivity</li>
+        <li>Asset Management</li>
+        <li>Content Managment</li>
+        <li>Billing &amp; Invoiceing</li>
+        <li>Email &amp; Instant Messaging</li>
+        <li>Image Rendering</li>
+      </ol>
+      <p>There are however a range of issues with hosting software in the cloud, the main one is security. Traditionally companies would host their data on private servers which they had full control over, however if data is stored on a public cloud and the cloud is hacked, the client has no control over the situation which leaves their data in a vunrable position. Also, another issue is tie ins and over dependency on the cloud provider which has been discussed on the <a href="infrastructure-platform.html">IaaS &amp; PaaS page</a> however when it comes to software, there is sometimes the added issue of file formats. For example, Google docs files are saved in the .gdoc format which is not compatible with Microsoft Word unless it has been converted and even then there are sometimes rendering issues during the conversion process, this is an attempt on Google's part to tie customers into their cloud service as oppose to using an alternative word proecesor.</p>
+    </article>
+  </div>
+  <footer>
+    <div class="wrapper">
+      <h2 class="features-header">Further Reading</h2>
+      <p>For more infomation on Cloud Computing, please consult the following literature:</p>
+      <ul>
+        <li><a href="https://www.forbes.com/sites/joemckendrick/2013/03/24/10-quotes-on-cloud-computing-that-really-say-it-all/#2d7b96b67f6c" target="_blank">10 Quotes on Cloud Computing That Really Say it All</a></li>
+        <li><a href="https://mitpress.mit.edu/books/cloud-computing" target="_blank">Cloud Computing From The MIT Press Essential Knowledge Series</a></li>
+        <li><a href="https://www.zdnet.com/article/top-cloud-providers-2018-how-aws-microsoft-google-ibm-oracle-alibaba-stack-up/" target="_blank">Top Cloud Providers 2018: How They Stack Up</a></li>
+        <li><a href="https://www.fnlondon.com/articles/tech-community-expresses-aws-worries-20170804" target="_blank">Possible Amazon Cloud Failure Worries Tech Community</a></li>
+        <li><a href="https://www.business2community.com/tech-gadgets/why-byod-and-saas-were-made-for-each-other-0263504" target="_blank">Why BYOD and SaaS Were Made for Each Other</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
+  </script>
+
+</body>
+
+</html>

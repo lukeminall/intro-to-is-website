@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <img class="logo" src="https://source.unsplash.com/random/300x100" alt="logo">
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
     <nav class="menu">
       <button aria-expanded="false" aria-controls="menu-list">
         <span class="open">☰</span>
@@ -20,89 +20,110 @@
       </button>
       <ul id="menu-list">
         <li>
-          <a href="">Tacos</a>
+          <a class="active" href="index.html">Introduction</a>
         </li>
         <li>
-          <a href="">Beers</a>
+          <a href="infrastructure-platform.html">IaaS &amp; PaaS</a>
         </li>
         <li>
-          <a href="">Wines</a>
+          <a href="software.html">SaaS</a>
         </li>
         <li>
-          <a href="">Desserts</a>
-        </li>
-        <li>
-          <a href="">Reservations</a>
+          <a href="infomation-processes.html">INaaS & BPaaS</a>
         </li>
       </ul>
     </nav>
   </header>
-  <div class="wrapper">
     <div class="top">
-      <header class="hero">
-        <h1>Terry's Taco Joint</h1>
-        <p>Pretty Good Tacos!</p>
-      </header>
-      <div class="cta cta1">
-        <p class="price">$1.99</p>
-        <p>Tacos</p>
+      <div class="hero">
+        <h2>Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.</h2>
+        <p>- National Institute of Standards and Technology</p>
       </div>
-      <div class="cta cta2">
-        <p class="price">$3.99</p>
-        <p>Kombucha</p>
+      <div class="hero2">
+        <ul>
+          <li>Broad Network Access</li>
+          <li>On Demand Self-Service</li>
+          <li>Resource Pooling / Shared Services</li>
+          <li>Rapid Elasticity</li>
+          <li>Measured Service</li>
+        </ul>
       </div>
 
     </div>
-
+  <div class="wrapper">
+    <h2 class="features-header">Cloud Service Types</h2>
     <section class="features">
       <div class="feature">
-        <span class="icon">🌮</span>
-        <h3>Tacos</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <h1>IaaS</h1>
+        <p>Infrastructure as a Service</p>
       </div>
       <div class="feature">
-        <span class="icon">🍺</span>
-        <h3>Beer</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <h1>PaaS</h1>
+        <p>Platform as a Service</p>
       </div>
       <div class="feature">
-        <span class="icon">🍷</span>
-        <h3>Wine</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <h1>SaaS</h1>
+        <p>Software as a Service</p>
       </div>
       <div class="feature">
-        <span class="icon">🎵</span>
-        <h3>Music</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <h1>INaaS</h1>
+        <p>Infomation as a Serivce</p>
+      </div>
+      <div class="feature">
+        <h1>BPaaS</h1>
+        <p>Business Process as a Service</p>
       </div>
     </section>
 
-    <section class="about">
-      <img src="images/queso-taco.png" alt="Yummy Taco" class="about__mockup">
-      <div class="about__details">
-        <h2>Featured Taco</h2>
-        <p>Slim Profile, easy to hold and loaded with cheese.</p>
-        <p>This is the one you have been waiting for</p>
-        <button>Learn More →</button>
-      </div>
-    </section>
-
-
-    <section class="gallery">
-      <h2>Instant Grams</h2>
-      <img src="https://source.unsplash.com/random/201x201" alt="">
-      <img src="https://source.unsplash.com/random/202x202" alt="">
-      <img src="https://source.unsplash.com/random/203x203" alt="">
-      <img src="https://source.unsplash.com/random/204x204" alt="">
-      <img src="https://source.unsplash.com/random/205x205" alt="">
-      <img src="https://source.unsplash.com/random/206x206" alt="">
-      <img src="https://source.unsplash.com/random/207x207" alt="">
-      <img src="https://source.unsplash.com/random/207x208" alt="">
-      <img src="https://source.unsplash.com/random/207x209" alt="">
-      <img src="https://source.unsplash.com/random/207x210" alt="">
-    </section>
+    <article class="post">
+      <h2>Introduction to Cloud Computing</h2>
+      <p>Due to the fact that cloud computing is relatively new computing model, there is a lot of hype and misinfomation surronding the term  and lots of misattribution which has resulted in a lof of people not knowing what cloud computing actually is.</p>
+      <p>In his book, <em>Cloud Computing</em> from the MIT Essential Knowlage Series, Nayan B. Ruparelia states that for a service to qualify as cloud computing it has to meet the following criteria:</p>
+      <ol>
+        <li>Broad Network Access</li>
+        <li>On Demand Self-Service</li>
+        <li>Resource Pooling / Shared Services</li>
+        <li>Rapid Elasticity</li>
+        <li>Measured Service</li>
+      </ol>
+      <p>Within cloud computing there are a range of services including: <strong>Infrastructure as a Service</strong>, <strong>Platform as a Service</strong>, <strong>Infomation as a Service</strong> &amp; <strong>Business Process as a Service</strong> which will be detailed further in the website</p>
+      <p>It is important to remember however that these services are relient on one another as the diagram below shows; if a company was to provide a SaaS product, they would also have to provide the platform (PaaS) &amp; &amp; Infrastructure (IaaS) as part of their cloud.</p>
+      <figure>
+        <img src="images/intro-img-1.jpg" alt="Level's of Abstraction">
+        <figcaption>Level's of Abstraction (Ruparlia R.B, 2016) </figcaption>
+      </figure>
+      <p>There are a wide range of clouds available both to the public and preivate, commercial and personal as well as for emerging technology such as IoT (Internet of Things):</p>
+      <h3 class="cloud-types">Public Clouds</h3>
+      <p class="cloud-types-definition">Public clouds are available to anyone over the internet for free or on a pay as you go basis subscription, examples of these include: Google Print, Google Drive, Microsoft Azure, Amazon EC2 and Dropbox.</p>
+      <h3 class="cloud-types">Private Clouds</h3>
+      <p class="cloud-types-definition">There are clouds that are private to companies and institutions and are described as being like a private internet that employees can acess form anywhere but only if they are a member of the organisation who own the cloud. It is worth noting that private clouds are not exclusivly web based, they can also be accessed via desktop applications sch as Northumbria's Simply Web.</p>
+      <h3 class="cloud-types">Community Clouds</h3>
+      <p class="cloud-types-definition">Community Clouds are similar to private clouds, however are accessible to niche communities of people / orrgniaisation with similar interests and needs, examples of this are NHS systems that are available across health care trusts / facilities or financial regualtion clouds that can be accessed by select finiancial institutions</p>
+      <h3 class="cloud-types">Hybrid Clouds</h3>
+      <p class="cloud-types-definition">Hybrid Clouds are made up of a combination of the above clouds and packaged in such a way that they become their own cloud services, an example of this would be if a company created a cloud with some private cloud cells (such as an in house customer relation management system or sales database) a community cloud cell (such as a financial regulation SaaS) and a public cloud cell (such as DropBox or EC2). </p>
+      <h3 class="cloud-types">Personal Clouds</h3>
+      <p class="cloud-types-definition">Personal clouds are a subset of private clouds that are specificly aimed at individual users, such as: DropBox, Google Drive & iCloud.</p>
+      <h3 class="cloud-types">Cloud of Things</h3>
+      <p class="cloud-types-definition">A Cloud of Things is a new term refffering to a cloud that is aimed at offering services to Internet of Things (IoT) devices as oppose to servicing individuals or organisations. Examples of this include clouds that allow devices to interat with each other, back up data or process real time data.</p>
+      <blockquote>
+        <p>"I don't need a hard disk in my computer if I can get to the server faster... carrying around these non-connected computers is byzantine by comparison."</p>
+        <p class="author">- Steve Jobs (1997)</p>
+      </blockquote>
+    </article>
   </div>
-
+  <footer>
+    <div class="wrapper">
+      <h2 class="features-header">Further Reading</h2>
+      <p>For more infomation on Cloud Computing, please consult the following literature:</p>
+      <ul>
+        <li><a href="https://www.forbes.com/sites/joemckendrick/2013/03/24/10-quotes-on-cloud-computing-that-really-say-it-all/#2d7b96b67f6c" target="_blank">10 Quotes on Cloud Computing That Really Say it All</a></li>
+        <li><a href="https://mitpress.mit.edu/books/cloud-computing" target="_blank">Cloud Computing From The MIT Press Essential Knowledge Series</a></li>
+        <li><a href="https://www.zdnet.com/article/top-cloud-providers-2018-how-aws-microsoft-google-ibm-oracle-alibaba-stack-up/" target="_blank">Top Cloud Providers 2018: How They Stack Up</a></li>
+        <li><a href="https://www.fnlondon.com/articles/tech-community-expresses-aws-worries-20170804" target="_blank">Possible Amazon Cloud Failure Worries Tech Community</a></li>
+        <li><a href="https://www.business2community.com/tech-gadgets/why-byod-and-saas-were-made-for-each-other-0263504" target="_blank">Why BYOD and SaaS Were Made for Each Other</a></li>
+      </ul>
+    </div>
+  </footer>
   <script>
     const navButton = document.querySelector('button[aria-expanded]');
 

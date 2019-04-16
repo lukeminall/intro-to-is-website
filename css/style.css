@@ -1,21 +1,18 @@
 body {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 15px;
+  color: #333;
 }
 
 button {
-  background: #ffc600;
+  background: #0D47A1;
   border: 0;
   padding: 10px 20px;
+  color: #fff;
 }
 
 img {
   max-width: 100%;
-}
-
-/* Main Container */
-.wrapper{
-  display: grid;
-  grid-gap: 16px;
 }
 
 /* logo */
@@ -23,10 +20,12 @@ header{
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 16px;
+  align-items: center;
+  margin: 0 16px;
 }
 
 .logo{
-  margin: 16px;
+  margin: 16px 0;
 }
 
 /* navigation */
@@ -44,10 +43,14 @@ header{
   padding: 8px;
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
   font-size: 20px;
   color: #272727;
-  background: #ffc600;
+}
+
+.menu a.active,
+.menu a:hover{
+  background:#0D47A1;
+  color: #fff;
 }
 
 /*responsive button */
@@ -58,56 +61,59 @@ header{
 /* creates grid for top section */
 .top{
   display: grid;
-  grid-template-areas:
-    "hero hero cta1"
-    "hero hero cta2";
+  grid-template-areas: "hero hero hero2";
   grid-gap: 16px;
 }
 
 /* styling for hero image */
 .hero{
   display: flex;
-  grid-area: hero;
   min-height: 400px;
   padding: 64px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background: url(../images/taco.jpg) bottom right;
+  background: url(../images/hero.jpg) bottom right;
   background-size: cover;
 
 }
 
 /* hero image overlay text */
 .hero *{
-  background: #ffc600;
   padding: 16px;
+  background: #0D47A1;
+  color: #fff;
 }
 
-/* styling for ctas */
-.cta1{
-  grid-area: cta1;
+.hero h2{
+  font-weight: 100;
 }
 
-.cta2{
-  grid-area: cta2;
-}
-
-.cta{
+/* styling for hero 2 */
+.hero2{
+  grid-area: hero2;
   display: grid;
   align-items: center;
   justify-items: center;
   align-content: center;
-  background: #ffc600;
+  background: #0D47A1;
+  color: #fff;
+  padding: 0 4vw 0 1vw;
 }
 
-.cta p{
-  margin: 0;
+.hero2 li{
+  font-size: 2em;
+  list-style: none;
+  border-bottom: 1px solid #fff;
+  line-height: 2;
 }
 
-.price{
-  font-size: 64px;
-  font-weight: 100;
+/* Main Container */
+.wrapper{
+  display: grid;
+  grid-gap: 16px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 /* features */
@@ -115,82 +121,184 @@ header{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   grid-gap: 16px;
+  margin: 5vh 0;
 }
 
 .feature{
   padding: 8px;
-  background: #ffc600;
-  border: 1px solid #ffc600;
+  background: #0D47A1;
+  border: 1px solid #1976D2;
+  border-radius: 5px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
   text-align: center;
 }
 
-.feature .icon{
-  font-size: 50px;
-}
-
-/* about section */
-.about{
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding:50px;
-  background: #fff;
-}
-
-/* gallery */
-.gallery{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 16px;
-}
-
-.gallery img{
-  width: 100%;
-}
-
 /* gallery header */
-.gallery h2{
+.features-header{
   display: grid;
   grid-column: 1/-1;
   grid-template-columns: 1fr auto 1fr;
   grid-gap: 16px;
+  margin-top: 2em;
   align-items: center;
 }
 
-.gallery h2:before, .gallery h2:after{
+.features-header:before, .features-header:after{
   display: block;
   content: '';
   height: 16px;
-  background: linear-gradient(to left, #ffc600, transparent);
+  background: linear-gradient(to left, #0D47A1, transparent);
 }
 
 
-.gallery h2:after{
-  background: linear-gradient(to right, #ffc600, transparent);
+.features-header:after{
+  background: linear-gradient(to right, #0D47A1, transparent);
+}
+
+/* main content */
+.post{
+  display: grid;
+  margin: 100px auto;
+  grid-gap: 10px 50px;
+  grid-template-columns: 3fr 12fr 5fr;
+}
+
+.post * {
+  grid-column: 1 / -1;
+}
+
+.post > figure{
+  margin: 0;
+  grid-column: 2/-2;
+}
+
+figcaption{
+  font-size: 10px;
+}
+
+.post>blockquote{
+  grid-column: 1 / -1;
+  font-size: 42px;
+  text-align: center;
+  margin: 0;
+}
+
+.post>blockquote .author{
+  text-align: right;
+}
+
+.post p {
+  line-height: 1.8;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.post a {
+  color: black;
+  text-decoration: underline #0D47A1;
+}
+
+.post h1,
+.post h2{
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 80px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.post ol{
+  grid-column: 2/-2;
+}
+
+.post li{
+  list-style: none;
+  font-size: 28px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.cloud-types{
+  grid-column: 1/-1;
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.cloud-types-definition{
+  grid-column: 4 / 2;
+  margin: 0;
+}
+
+/* footer */
+footer{
+  text-align: center;
+}
+
+footer h1{
+  margin-bottom: 0;
+}
+
+footer p{
+  margin: 0;
+}
+
+footer ul{
+  padding-left: 0;
+}
+
+footer li{
+  line-height: 1.8;
+  list-style-type: none;
+}
+
+footer a{
+  color: #333;
+}
+
+/* inner page styling */
+.inner-page-header{
+  background: url("../images/inner-page-header.jpg") center center;
+  background-size: cover;
+  padding: 5vh;
+}
+
+.inner-page-header h1{
+  color: #fff;
+  text-shadow: 2px 2px #333;
+  font-size: 3em;
 }
 
 /* tablet */
 @media (max-width: 769px) {
     /* move nav to top */
     .menu{
-      order: -1;
+      order: 0;
     }
 
     /* rearrange header content*/
     .top{
       grid-template-areas:
-        "hero hero"
-        "cta1 cta2";
+        "hero"
+        "hero2";
     }
 }
 
 /* mobile */
 @media (max-width: 576px) {
+
+    nav.menu{
+      display: grid;
+      justify-items: center;
+      align-items: end;
+      margin-top: 2em;
+    }
+
     /*responsive button */
     [aria-controls="menu-list"]{
       display: block;
-      margin-bottom: 10px;
     }
 
     /* responsive nav */
@@ -223,11 +331,28 @@ header{
     .top{
       grid-template-areas:
         "hero"
-        "cta1"
-        "cta2";
+        "hero2";
     }
 
-    .about{
-      grid-template-columns: 1fr;
+    /* main post title */
+    .post h2{
+      font-size: 40px;
     }
+
+    /* post list */
+    .post ol{
+      grid-column: 1 / -1;
+      padding: 0;
+    }
+
+    .post li{
+      margin: 1em 0;
+    }
+
+    /* image size */
+    .post > figure {
+      margin: 0;
+      grid-column: 1/-1;
+    }
+
 }

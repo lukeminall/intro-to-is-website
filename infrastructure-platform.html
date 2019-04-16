@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>An Introduction to Cloud Computing</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+    <nav class="menu">
+      <button aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        Menu
+      </button>
+      <ul id="menu-list">
+        <li>
+          <a href="index.html">Introduction</a>
+        </li>
+        <li>
+          <a class="active" href="infrastructure-platform.html">IaaS &amp; PaaS</a>
+        </li>
+        <li>
+          <a href="software.html">SaaS</a>
+        </li>
+        <li>
+          <a href="infomation-processes.html">INaaS & BPaaS</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="inner-page-header">
+    <div class="wrapper">
+      <h1>IaaS &amp; PaaS</h1>
+    </div>
+  </section>
+  <div class="wrapper">
+    <article class="post">
+      <h2>Infrastructure as a Service (IaaS)</h2>
+      <p>Infrastructure as a service is the first level of cloud computing, it is the physical hardware that can run cloud platforms and subsiquently SaaS, INaaS &amp; BPaaS. Or, can be purchased used as stand alone hatdware as it meets the 5 criteria for cloud computing set out on the <a href="index.html">introduction page</a>. There are 7 main use cases for IaaS which are:</p>
+      <ol>
+        <li>Storage</li>
+        <li>IT Systems Monitoring</li>
+        <li>Back Up &amp; Recovery</li>
+        <li>Platform Hosting</li>
+        <li>Web Hosting</li>
+        <li>Computing</li>
+        <li>Service Managment</li>
+      </ol>
+      <p>There are a wide range of public clouds available that fulfill a wide range of Infrastruxture needs, such as: DropBox, Google Print, Amazon EC2, HP Cloud, Rack Space, Amazon Cloud, Just Cloud, Zipcloud &amp; Carbonite.However there are a wide range of public and community clouds that are used to provice IaaS to large corperations, institutions and universities.</p>
+      <figure>
+        <img src="images/iaas-img-1.png" alt="Top Cloud Providers of 2018">
+        <figcaption>Top Cloud Providers of 2018</figcaption>
+      </figure>
+
+    </article>
+
+    <article class="post">
+      <h2>Platform as a Service (IaaS)</h2>
+      <p>PaaS's are the platofrms that are built on top of IaaS infrastructure. These platforms can then be used to build SaaS software or for stand alone functions such as Data Ware Housing or database hosting. The 7 areas of PaaS are:</p>
+      <ol>
+        <li>Data Warehousing</li>
+        <li>Business Inteligence</li>
+        <li>Database Services</li>
+        <li>Application Development</li>
+        <li>Application Testing</li>
+        <li>Application Hosting</li>
+        <li>Application Intergration</li>
+      </ol>
+      <p>The disadvantage of PaaS platforms such as Aamazon Web Services is over reliace, if an application has been built on a platform it is often too expensive and time consuming to move to another platform and if an organisations platofrm of choice is having relaiability issues or has become too costly after a tariff price rise for example, this can cause serious issues within  the company or institution.</p>
+    </article>
+
+  </div>
+  <footer>
+    <div class="wrapper">
+      <h2 class="features-header">Further Reading</h2>
+      <p>For more infomation on Cloud Computing, please consult the following literature:</p>
+      <ul>
+        <li><a href="https://www.forbes.com/sites/joemckendrick/2013/03/24/10-quotes-on-cloud-computing-that-really-say-it-all/#2d7b96b67f6c" target="_blank">10 Quotes on Cloud Computing That Really Say it All</a></li>
+        <li><a href="https://mitpress.mit.edu/books/cloud-computing" target="_blank">Cloud Computing From The MIT Press Essential Knowledge Series</a></li>
+        <li><a href="https://www.zdnet.com/article/top-cloud-providers-2018-how-aws-microsoft-google-ibm-oracle-alibaba-stack-up/" target="_blank">Top Cloud Providers 2018: How They Stack Up</a></li>
+        <li><a href="https://www.fnlondon.com/articles/tech-community-expresses-aws-worries-20170804" target="_blank">Possible Amazon Cloud Failure Worries Tech Community</a></li>
+        <li><a href="https://www.business2community.com/tech-gadgets/why-byod-and-saas-were-made-for-each-other-0263504" target="_blank">Why BYOD and SaaS Were Made for Each Other</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
+  </script>
+
+</body>
+
+</html>
